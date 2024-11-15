@@ -1,0 +1,78 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 100px;
+  transition: 0.5s;
+  z-index: 10000;
+}
+
+header.scrolled {
+  background: rgba(0, 0, 0, 0.6);
+  border-bottom: 2px solid var(--primary);
+  border-image: linear-gradient(
+      90deg,
+      transparent,
+      var (--primary),
+      transparent
+    )
+    30;
+  backdrop-filter: blur(20px);
+  padding: 10px 100px;
+}
+.logo {
+  font-family: "Racing Sans One", cursive;
+  font-size: 35px;
+  color: #ffffff;
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.nav {
+  display: flex;
+}
+
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+  color: #ffffff; 
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.user-info .username {
+  margin-left: 4px;
+font-size: 20px;
+}
+
+.user-info ion-icon {
+  font-size: 24px; 
+  color: #ffffff; 
+}
+.logout-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  transform: translateX(70px);
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgb(113, 10, 10);
+  width: 250px;
+  padding: 8px;
+  margin-top: 4px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.user-info img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}

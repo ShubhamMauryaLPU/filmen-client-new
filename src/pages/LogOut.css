@@ -1,0 +1,47 @@
+.logout-mainDiv {
+  width: 100%;
+}
+.logout-img-div {
+  display: flex;
+}
+.logout-img-div img {
+    float: left;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.logout-img-div p {
+  display: inline-block;
+  text-align: center;
+  align-self: center;
+}
+.logout-img-div hr{
+    color: #ffffff;
+}
+.logout-detail-div button {
+  background: transparent;
+  color: #ffffff;
+  font-size: 1.2rem;
+  border: none;
+    text-align: justify;
+}
+.logout-detail-div {
+    margin-left: 13px;
+
+}
+.logout-mainDiv .logout-bookmark{
+    padding: 15px 0 0 0;
+    display: flex;
+}
+.logout-bookmark a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+.logout-bookmark ion-icon{
+    align-self: baseline; 
+    transform: translateY(5px);
+}
+.logout-detail-div button ion-icon{
+    transform: translateY(5px);
+}

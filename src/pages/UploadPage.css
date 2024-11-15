@@ -1,0 +1,91 @@
+.upload-page-mainDiv {
+  background-image: url('../../public/assets/movies/kalkiBack.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.upload-page-mainDiv::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.upload-form-div {
+  opacity: 1;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  height: auto;
+  width: 600px;
+  margin-left: 50px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.upload-form-div h4 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.upload-form-div div {
+  margin-bottom: 10px;
+}
+
+.upload-form-div label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.upload-form-div input,
+.upload-form-div select,
+.upload-form-div textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.upload-form-div textarea {
+  height: 75px;
+}
+
+.upload-form-div button {
+  display: block;
+  margin: 20px auto 0;
+}
+
+.upload-page-nevigation{
+  margin-right: 0;
+  margin-top: 50%;
+  margin-left: 42%;
+  display: flex;
+  justify-content: end;
+}
+.upload-page-nevigation button{
+  border: 1px solid;
+  border-radius: 4px;
+  background-color: white;
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  margin-left: 5px;
+}
+.upload-page-nevigation ion-icon{
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+  margin-top: 4px;
+}

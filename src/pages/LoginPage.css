@@ -1,0 +1,79 @@
+.for-background {
+  color: #ffffff;
+  background-image: url('../../public/assets/movies/kalkiBack.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.for-background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.LoginPage-mainDiv {
+  width: 50%;
+  height: 60vh;
+  margin: 10% auto;
+  background-color: white;
+  border-radius: 5px;
+  z-index: 10;
+  position: relative;
+}
+.LoginPage-mainDiv h2 {
+  text-align: center;
+}
+.tophtml-loginPage {
+  height: 30px;
+}
+.LoginPage-mainDiv .row .tophtml {
+  background-color: rgb(60, 9, 107);
+  height: 60vh;
+  transform: translateX(12px);
+  color: #ffffff;
+}
+.loginPage-logMain .forgot-password {
+  float: right;
+  transform: translateX(-80px);
+}
+.loginPage-logMain input {
+  padding: 5px;
+  width: 70%;
+  display: block;
+  box-shadow: 0 1px 1px 0;
+}
+.loginPage-logMain {
+  text-align: center;
+}
+.loginPage-logMain .login-button {
+  padding: 5px;
+  width: 70%;
+  display: block;
+  color: #ffffff;
+  background-color: rgb(40, 40, 219);
+}
+.tophtml .para {
+  width: 80%;
+  padding-left: 10%;
+}
+.tophtml .html-button button {
+  display: block;
+  width: 80%;
+  padding: 3px;
+  margin: 10px 0 4px 10%;
+  border-radius: 5px;
+}
+.loginPage-logMain .for-register-button {
+  border: none;
+  color: blue;
+}

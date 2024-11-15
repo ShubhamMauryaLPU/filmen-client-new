@@ -1,0 +1,109 @@
+
+.movie-upload-mainDiv {
+  color: #e0e0e0;
+  background: url('../../public/assets/movies/kalkiBack.jpg') center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.movie-upload-mainDiv::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 0;
+}
+.uploadDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 700px;
+  width: 90%;
+  padding: 20px;
+  background: rgba(30, 30, 30, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.movie-upload-mainDiv label {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.movie-upload-mainDiv input[type="file"] {
+  display: none;
+}
+
+.movie-upload-mainDiv label[for="fileUpload"] {
+  padding: 8px 16px;
+  background: #00bcd4;
+  color: #ffffff;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.movie-upload-mainDiv label[for="fileUpload"]:hover {
+  background: #0097a7;
+}
+
+.movie-upload-mainDiv img,
+.uploadDiv video {
+  height: 140px;
+  width: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.movie-upload-mainDiv button {
+  position: relative;
+  padding: 10px 20px;
+  background: #00bcd4;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-left: 20px;
+  z-index: 1000;
+}
+
+.movie-upload-mainDiv button:hover {
+  background: #0097a7;
+}
+
+@media (max-width: 768px) {
+  .uploadDiv {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .movie-upload-mainDiv img,
+  .uploadDiv video {
+    height: 120px;
+    width: 120px;
+    margin-top: 15px;
+  }
+
+  .movie-upload-mainDiv label,
+  .movie-upload-mainDiv button {
+    margin-top: 15px;
+  }
+}
