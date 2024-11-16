@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // const BASE_URL = "https://server-filmen.onrender.com/";
-const BASE_URL = "http://localhost:3500/";
+const BASE_URL = "https://server-filmen.onrender.com/";
 // console.log("Base URL:", BASE_URL);
 export const SignUp = (data) => {
   return axios.post(`${BASE_URL}api/auth/register`, data);
