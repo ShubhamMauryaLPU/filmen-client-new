@@ -7,7 +7,7 @@ import MovieSwiper from '../components/MovieSwiper';
 const Banner = () => {
     const [movies,setMovies]=useState([]);
     const fetchData=()=>{
-        fetch('http://localhost:5173/data/movieData.json')
+        fetch('https://filmen2.onrender.com/data/movieData.json')
         .then(res => res.json())
         .then(data=>setMovies(data))
         .catch(e=>console.log(e.message));

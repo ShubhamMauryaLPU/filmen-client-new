@@ -5,7 +5,7 @@ import { AuthContext } from "../components/AuthContext.jsx";
 import "./LoginPage.css";
 
 const LoginPage = () => {
-  const [logErrorMsg, setLogErrorMsg] = useState(""); // Fixed variable naming convention
+  const [LogErrorMsg, setLogErrorMsg] = useState(""); // Preserved variable naming convention
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -19,7 +19,7 @@ const LoginPage = () => {
     setFormData((currData) => ({ ...currData, [name]: value }));
   };
 
-  const handleLogForm = async (e) => {
+  const HandleLogForm = async (e) => {
     e.preventDefault();
     console.log("Form Data Submitted:", formData);
 
@@ -41,76 +41,71 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="login-page-background">
-      <div className="login-page-container">
+    <div className="for-background">
+      <div className="LoginPage-mainDiv">
         <div className="row">
           {/* Left Side - Social Media Login */}
-          <div className="col-4 login-sidebar">
+          <div className="col-4 tophtml">
             <p className="text-center mt-5">
               <img
                 src="/assets/images/tophtml.jpeg"
                 alt="Top HTML Logo"
-                className="login-logo"
+                className="tophtml-loginPage"
               />
               <b>TOP HTML</b>
             </p>
-            <p className="text-center mt-5">Login using social media for quick access</p>
-            <div className="social-login-buttons mt-4">
-              <button className="btn btn-primary text-light">Sign with Facebook</button>
-              <button className="btn btn-info text-light">Sign with Twitter</button>
-              <button className="btn btn-danger text-light">Sign with Google</button>
+            <p className="para mt-5">Login using social media to get quick access</p>
+            <div className="html-button mt-4">
+              <button className="bg-primary text-light">Sign with facebook</button>
+              <button className="bg-info text-light">Sign with twiter</button>
+              <button className="bg-danger text-light">Sign with google</button>
             </div>
           </div>
 
           {/* Right Side - Login Form */}
-          <div className="col-8 login-form-section">
-            <p className="text-center mt-4 fs-4 text-muted">
-              <b>Login to Your Account</b>
+          <div className="col-8 loginPage-logMain">
+            <p className="mt-4 fs-4 text-muted text-center">
+              <b>Login to your account</b>
             </p>
             <p className="text-center mb-5 text-dark">
               Don't have an account?&nbsp;
               <Link to="/sign-up">
-                <button className="btn btn-secondary">Register</button>
+                <button className="for-register-button">Register</button>
               </Link>
             </p>
 
-            {logErrorMsg && <p className="error-message text-center">{logErrorMsg}</p>}
+            {LogErrorMsg && (
+              <p className="text-center text-danger">
+                {LogErrorMsg}
+              </p>
+            )}
 
-            <form onSubmit={handleLogForm}>
-              <div className="form-group d-flex justify-content-center mb-3">
+            <form action="#" method="post" onSubmit={HandleLogForm}>
+              <div className="d-flex justify-content-center mb-3">
                 <input
                   type="text"
-                  name="username"
                   placeholder="Username"
-                  aria-label="Username"
-                  className="form-control"
-                  value={formData.username}
+                  name="username"
                   onChange={handleChange}
-                  required
+                  value={formData.username}
                 />
               </div>
-              <div className="form-group d-flex justify-content-center mb-3">
+              <div className="d-flex justify-content-center mb-3">
                 <input
                   type="password"
                   name="password"
+                  id="pass"
                   placeholder="Password"
-                  aria-label="Password"
-                  className="form-control"
-                  value={formData.password}
                   onChange={handleChange}
-                  required
+                  value={formData.password}
                 />
               </div>
-              <p className="text-center mb-5">
+              <p className="mb-5">
                 <a href="#" className="text-decoration-none forgot-password">
                   Forgot password?
                 </a>
               </p>
-              <div className="d-flex justify-content-center">
-                <button type="submit" className="btn btn-success login-button">
-                  Log In
-                </button>
-              </div>
+              <button className="mt-5 login-button">Log in</button>
             </form>
           </div>
         </div>

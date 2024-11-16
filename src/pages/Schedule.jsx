@@ -47,7 +47,7 @@ const Schedule = () => {
   const [mdata, setMdata] = useState([]);
   const [filter, setFilter] = useState(filtersList);
   const fetchData = () => {
-    fetch("http://localhost:5173/data/movieData.json")
+    fetch("https://filmen2.onrender.com/data/movieData.json")
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((e) => console.log(e.message));

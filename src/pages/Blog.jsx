@@ -4,7 +4,7 @@ import BlogCard from '../components/BlogCard';
 const Blog = () => {
     const [blogs,setBlog]=useState([]);
     const fetchData=()=>{
-      fetch('http://localhost:5173/data/blogData.json')
+      fetch('https://filmen2.onrender.com/data/blogData.json')
       .then(res => res.json())
       .then(data=>setBlog(data))
       .catch(e=>console.log(e.message));
