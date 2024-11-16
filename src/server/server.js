@@ -1,19 +1,50 @@
 import axios from "axios";
 
-// const BASE_URL = "https://server-filmen.onrender.com/";
+// Base URL for the API
 const BASE_URL = "https://server-filmen.onrender.com/";
-// console.log("Base URL:", BASE_URL);
-export const SignUp = (data) => {
-  return axios.post(`${BASE_URL}api/auth/register`, data);
+
+// Helper function to handle errors globally (optional)
+const handleError = (error) => {
+  console.error("API Error:", error.response?.data || error.message);
+  throw error.response?.data || error.message;
 };
 
-export const SignIn = (data, config) => {
-  return axios.post(`${BASE_URL}api/auth/login`, data, config);
+// Sign Up API call
+export const SignUp = async (data) => {
+  try {
+    const response = await axios.post(`${BASE_URL}api/auth/register`, data);
+    return response.data; // Return the response data
+  } catch (error) {
+    handleError(error); // Handle and rethrow error
+  }
 };
 
-export const SignOut = (data) => {
-  return axios.post(`${BASE_URL}api/auth/logout`, data);
+// Sign In API call
+export const SignIn = async (data, config = {}) => {
+  try {
+    const response = await axios.post(`${BASE_URL}api/auth/login`, data, config);
+    return response.data; // Return the response data
+  } catch (error) {
+    handleError(error); // Handle and rethrow error
+  }
 };
-export const CheckAuth = () => {
-  return axios.get(`${BASE_URL}api/test/should-be-logged-in`);
+
+// Sign Out API call
+export const SignOut = async (data) => {
+  try {
+    const response = await axios.post(`${BASE_URL}api/auth/logout`, data);
+    return response.data; // Return the response data
+  } catch (error) {
+    handleError(error); // Handle and rethrow error
+  }
+};
+
+// Check Authentication Status
+export const CheckAuth = async () => {
+  try {
+    const response = await axios.get(`${BASE_URL}api/test/should-be-logged-in`);
+    return response.data; // Return the response data
+  } catch (error) {
+    handleError(error); // Handle and rethrow error
+  }
 };
