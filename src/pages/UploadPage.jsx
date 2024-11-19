@@ -23,6 +23,8 @@ const UploadPage = () => {
     });
   };
 
+  
+
   const handleSubmit = (event) => {
     event.preventDefault();
     setInfo("Details Submitted, go to the next page");
